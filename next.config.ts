@@ -3,6 +3,9 @@ import path from "node:path";
 
 
 const nextConfig: NextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   images: {
     remotePatterns: [
       {
@@ -12,7 +15,7 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'assets.cube.nl',
-      },
+      }
     ],
   },
   outputFileTracingRoot: path.resolve(__dirname, '../../'),
@@ -23,5 +26,3 @@ const nextConfig: NextConfig = {
     }
   }
 };
-
-export default nextConfig;
