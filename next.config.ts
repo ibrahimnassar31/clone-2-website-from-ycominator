@@ -11,11 +11,13 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'wsrv.nl',
+        pathname: '/**',
       },
       {
         protocol: 'https',
         hostname: 'assets.cube.nl',
-      }
+        pathname: '/**',
+      },
     ],
   },
   outputFileTracingRoot: path.resolve(__dirname, '../../'),
@@ -26,3 +28,5 @@ const nextConfig: NextConfig = {
     }
   }
 };
+
+export default nextConfig;
