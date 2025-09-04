@@ -1,0 +1,23 @@
+.blog-card-animate {
+  will-change: transform;
+  transition: none;
+}
+.blog-card-animate:hover {
+  animation: blogCardTranslateY 1s ;
+}
+@keyframes blogCardTranslateY {
+  0% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .blog-card-animate:hover {
+    animation: none !important;
+  }
+}
